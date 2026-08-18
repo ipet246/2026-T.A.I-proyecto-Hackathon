@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: #ffffff;
+    color: #1d2a3a;
+    display: grid;
+    grid-template-columns: 242px 1fr;
+    grid-template-rows: 117px 1fr;
+}
+
+/* Barra superior */
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 40px;
+    background: linear-gradient(135deg, #173b66, #2878a8);
+    color: white;
+    box-shadow: none;
+}
+
+header img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+}
+
+header tittle {
+    position: absolute;
+    left: 263px;
+    top: 48px;
+    font-size: 1rem;
+    color: white;
+}
+
+header a {
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 20px;
+    border: 1px solid #ffffff99;
+    border-radius: 20px;
+}
+
+header a:hover {
+    background: white;
+    color: #1d5f8a;
+}
+
+/* Menú lateral */
+.main-menu {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: stretch;
+    align-self: stretch;
+    width: 100%;
+    min-height: 503px;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.main-menu > ul,
+.menu-item {
+    height: auto;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-btn {
+    display: flex;
+    height: 95px;
+    align-items: center;
+    padding: 0 29px;
+    margin: 0;
+    background: #245987;
+    font-size: 1.65rem;
+    font-weight: normal;
+    color: white;
+}
+
+.submenu {
+    display: block;
+}
+
+.submenu li {
+    display: flex;
+    height: 101px;
+    margin: 0;
+}
+
+.submenu a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 29px;
+    border-radius: 0;
+    background: white;
+    color: #202938;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1.6rem;
+}
+
+.submenu a:hover {
+    background: #edf5fa;
+    color: #202938;
+}
+
+/* El texto del último enlace se adapta al diseño de referencia. */
+.submenu li:last-child a {
+    font-size: 0;
+    white-space: normal;
+}
+
+.submenu li:last-child a::after {
+    content: "Preguntas y\A Dudas";
+    white-space: pre-line;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+/* Área central y botones */
+body::before {
+    content: "";
+    position: absolute;
+    left: calc(242px + 7vw);
+    top: 142px;
+    width: 308px;
+    height: 263px;
+    background: url("img/logo.png") center / contain no-repeat;
+    transform: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.lateral,
+.boton1 {
+    position: absolute;
+    margin: 0;
+}
+
+.lateral {
+    top: 457px;
+    left: 69vw;
+}
+
+.boton1 {
+    top: 459px;
+    left: calc(242px + 11vw);
+}
+button {
+    width: 270px;
+    height: 86px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #245987;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: normal;
+    cursor: pointer;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1d4c73;
+}
+
+/* El botón existente de cuestionario se muestra como en la referencia. */
+.boton1 button {
+    font-size: 0;
+}
+
+.boton1 button::after {
+    content: "Formulario";
+    font-size: 1.6rem;
+}
+
+/* Adaptación para celular */
+@media (max-width: 700px) {
+    body {
+        display: block;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header tittle {
+        left: 118px;
+    }
+
+    .main-menu {
+        min-height: 0;
+        height: auto;
+    }
+
+    .lateral,
+    .boton1 {
+        display: block;
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 18px 0;
+    }
+
+    button {
+        width: min(88vw, 240px);
+    }
+
+    body::before {
+        display: none;
+    }
+}
