@@ -27,7 +27,7 @@ include "conexion.php";
             <li class="menu-item">
                 <span class="menu-btn">Menú ☰</span>
                 <ul class="submenu">
-                    <li><a href="">Armazones</a></li>
+                    <li><a href="armazones.php">Armazones</a></li>
                     <li><a href="">Guía</a></li>
                     <li><a href="">Consultas y Dudas</a></li>
                 </ul>
