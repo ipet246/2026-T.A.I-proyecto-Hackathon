@@ -1,105 +1,176 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
 * {
     box-sizing: border-box;
+}
+
+:root {
+    --texto: #403949;
+    --lila: #a998c4;
+    --lila-profundo: #83709e;
+    --rosa: #edcfd8;
+    --agua: #a8d1c8;
+    --agua-profundo: #6c9e95;
+    --beige: #f7f1e9;
+    --beige-medio: #ebe2d7;
+    --linea: #d9cdd4;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    position: relative;
-    background: #ffffff;
-    color: #1d2a3a;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    color: var(--texto);
+
+    /* Fondo beige grisáceo, sin blanco brillante */
+    background: linear-gradient(135deg, #f8f2eb 0%, #f4eff5 52%, #edf5f1 100%);
+
     display: grid;
     grid-template-columns: 242px 1fr;
     grid-template-rows: 117px 1fr;
 }
 
-/* Barra superior */
+
+/* ================================
+   BARRA SUPERIOR
+================================ */
+
 header {
     grid-column: 1 / -1;
+
     display: flex;
     align-items: center;
     gap: 18px;
+
     padding: 12px 40px;
-    background: linear-gradient(135deg, #173b66, #2878a8);
-    color: white;
-    box-shadow: none;
+
+    background: linear-gradient(115deg, #b7a6d0, #a9d1c8);
+
+    color: var(--texto);
+
+    box-shadow:
+        0 4px 16px rgba(85, 69, 101, 0.12);
 }
 
 header img {
     width: 85px;
     height: 85px;
+
     object-fit: contain;
-    background: white;
+
+    background: #fffaf5;
+
     border-radius: 50%;
     padding: 6px;
+
+    box-shadow:
+        0 3px 10px rgba(85, 69, 101, 0.12);
 }
 
 header h2 {
     margin: 0;
-    font-size: 2.6rem;
+
+    font-size: 2.5rem;
     letter-spacing: 4px;
+
+    color: var(--texto);
 }
 
-header tittle {
-    position: absolute;
-    left: 263px;
-    top: 48px;
+header .subtitulo {
+    margin: 3px 0 0;
+
     font-size: 1rem;
-    color: white;
+
+    color: #554d5f;
 }
 
 header a {
     margin-left: auto;
-    color: white;
+
+    color: var(--texto);
+
     text-decoration: none;
-    font-weight: bold;
+
+    font-weight: 600;
+
     padding: 9px 20px;
-    border: 1px solid #ffffff99;
-    border-radius: 20px;
+
+    border: 1px solid rgba(64, 57, 73, 0.24);
+
+    border-radius: 25px;
+
+    transition: 0.25s ease;
 }
 
 header a:hover {
-    background: white;
-    color: #1d5f8a;
+    background: #f2dbe3;
+
+    color: var(--texto);
 }
 
-/* Menú lateral */
+
+/* ================================
+   MENÚ LATERAL
+================================ */
+
 .main-menu {
     grid-column: 1;
     grid-row: 2;
-    justify-self: stretch;
-    align-self: stretch;
-    width: 100%;
-    min-height: 503px;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    box-shadow: none;
-}
 
-.main-menu > ul,
-.menu-item {
-    height: auto;
+    width: 100%;
+
+    min-height: 503px;
+
+    margin: 0;
+
+    padding: 12px;
+
+    background: rgba(239, 230, 221, 0.92);
+
+    border-right: 1px solid var(--linea);
+
+    box-shadow:
+        3px 0 14px rgba(85, 69, 101, 0.07);
 }
 
 .main-menu ul {
     list-style: none;
+
     padding: 0;
     margin: 0;
 }
 
+
+/* Botón principal */
+
 .menu-btn {
     display: flex;
-    height: 95px;
+
+    height: 75px;
+
     align-items: center;
-    padding: 0 29px;
-    margin: 0;
-    background: #245987;
-    font-size: 1.65rem;
-    font-weight: normal;
-    color: white;
+
+    padding: 0 22px;
+
+    margin-bottom: 7px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(120deg, #b7ddd4, #a8d1c8);
+
+    font-size: 1.45rem;
+
+    font-weight: 600;
+
+    color: #345d58;
 }
+
+
+/* Submenú */
 
 .submenu {
     display: block;
@@ -107,129 +178,258 @@ header a:hover {
 
 .submenu li {
     display: flex;
-    height: 101px;
-    margin: 0;
+
+    height: 75px;
+
+    margin: 5px 0;
 }
 
 .submenu a {
     display: flex;
+
     align-items: center;
+
     width: 100%;
-    padding: 0 29px;
-    border-radius: 0;
-    background: white;
-    color: #202938;
+
+    padding: 0 22px;
+
+    border-radius: 12px;
+
+    background: #fffaf5;
+
+    color: var(--texto);
+
     text-decoration: none;
+
     white-space: nowrap;
-    font-size: 1.6rem;
+
+    font-size: 1.35rem;
+
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
 }
 
 .submenu a:hover {
-    background: #edf5fa;
-    color: #202938;
+    background: #f1dce3;
+
+    color: #493f4c;
+
+    padding-left: 28px;
 }
 
-/* El texto del último enlace se adapta al diseño de referencia. */
+
+/* Último enlace */
+
 .submenu li:last-child a {
     font-size: 0;
+
     white-space: normal;
 }
 
 .submenu li:last-child a::after {
     content: "Preguntas y\A Dudas";
+
     white-space: pre-line;
-    font-size: 1.6rem;
-    line-height: 1.4;
+
+    font-size: 1.35rem;
+
+    line-height: 1.25;
 }
 
-/* Área central y botones */
+
+/* ================================
+   LOGO CENTRAL
+================================ */
+
 body::before {
     content: "";
+
     position: absolute;
+
     left: calc(242px + 7vw);
+
     top: 142px;
+
     width: 308px;
     height: 263px;
-    background: url("img/logo.png") center / contain no-repeat;
-    transform: none;
+
+    background:
+        url("img/logo.png")
+        center / contain
+        no-repeat;
+
     pointer-events: none;
+
     z-index: 1;
+
+    opacity: 0.92;
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(85, 69, 101, 0.10)
+        );
 }
+
+
+/* ================================
+   BOTONES
+================================ */
 
 .lateral,
 .boton1 {
     position: absolute;
+
     margin: 0;
+
+    z-index: 2;
 }
 
 .lateral {
     top: 457px;
+
     left: 69vw;
 }
 
 .boton1 {
     top: 459px;
+
     left: calc(242px + 11vw);
 }
+
 button {
     width: 270px;
+
     height: 86px;
+
     padding: 12px 16px;
+
     border: none;
-    border-radius: 20px;
-    background: #245987;
-    color: white;
+
+    border-radius: 18px;
+
+    background: linear-gradient(120deg, #b7a6d0, #9fcbc1);
+
+    color: #393242;
+
     font-size: 1.6rem;
-    font-weight: normal;
+
+    font-weight: 600;
+
     cursor: pointer;
-    box-shadow: none;
-    transition: background 0.2s;
+
+    box-shadow:
+        0 6px 16px rgba(85, 69, 101, 0.14);
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
 }
 
 button:hover {
-    background: #1d4c73;
+    background: linear-gradient(120deg, #a08abe, #8eb9b0);
+
+    transform: translateY(-2px);
 }
 
-/* El botón existente de cuestionario se muestra como en la referencia. */
+button:active {
+    transform: translateY(0);
+}
+
+
+/* Botón Formulario */
+
 .boton1 button {
     font-size: 0;
 }
 
 .boton1 button::after {
     content: "Formulario";
+
     font-size: 1.6rem;
 }
 
-/* Adaptación para celular */
+
+/* ================================
+   CELULAR
+================================ */
+
 @media (max-width: 700px) {
+
     body {
         display: block;
+
+        background: linear-gradient(135deg, #f8f2eb 0%, #f4eff5 52%, #edf5f1 100%);
     }
 
     header {
         padding: 15px;
+
+        gap: 12px;
     }
 
-    header tittle {
-        left: 118px;
+    header img {
+        width: 65px;
+        height: 65px;
+    }
+
+    header h2 {
+        font-size: 1.6rem;
+
+        letter-spacing: 2px;
+    }
+
+    header .subtitulo {
+        font-size: 0.8rem;
     }
 
     .main-menu {
         min-height: 0;
+
         height: auto;
+
+        padding: 10px;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--linea);
+    }
+
+    .menu-btn {
+        height: 60px;
+
+        font-size: 1.2rem;
+    }
+
+    .submenu li {
+        height: 58px;
+    }
+
+    .submenu a {
+        font-size: 1.1rem;
+    }
+
+    .submenu li:last-child a::after {
+        font-size: 1.1rem;
     }
 
     .lateral,
     .boton1 {
         display: block;
+
         position: static;
-        transform: none;
+
         text-align: center;
+
         margin: 18px 0;
     }
 
     button {
-        width: min(88vw, 240px);
+        width: min(88vw, 300px);
+
+        height: 70px;
     }
 
     body::before {

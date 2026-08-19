@@ -18,7 +18,7 @@ include "conexion.php";
 
         <h2>T.A.I</h2>
         <p class="subtitulo">Tu Armazón Ideal</p>
-        <a href="">Conocenos</a></li>
+        <a href="conocenos.html">Conócenos</a></li>
 
     </header>
 
@@ -28,8 +28,8 @@ include "conexion.php";
                 <span class="menu-btn">Menú ☰</span>
                 <ul class="submenu">
                     <li><a href="armazones.php">Armazones</a></li>
-                    <li><a href="">Guía</a></li>
-                    <li><a href="">Consultas y Dudas</a></li>
+                    <li><a href="guia.php">Guía</a></li>
+                    <li><a href="preguntas-dudas.html">Consultas y Dudas</a></li>
                 </ul>
             </li>
         </ul>

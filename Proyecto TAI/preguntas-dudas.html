@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preguntas y dudas | TAI Óptica</title>
+    <style>
+        :root { --tinta: #403949; --lila: #66567b; --verde: #4f857d; --fondo: #faf6f1; --linea: #e5dce3; --tarjeta: #fffdfb; }
+        * { box-sizing: border-box; }
+        body { margin: 0; color: var(--tinta); background: var(--fondo); font: 16px/1.55 "Segoe UI", Arial, sans-serif; }
+        header { padding: 42px max(8vw, 24px); color: white; background: linear-gradient(120deg, #705d85, #6a9d94); }
+        header a { color: #f9eaf1; font-size: .9rem; font-weight: 700; text-decoration: none; }
+        header a:hover { text-decoration: underline; }
+        header p { margin: 22px 0 5px; color: #f3dfe7; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+        h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.2rem); }
+        header span { display: block; max-width: 600px; margin-top: 8px; color: #edf6f2; }
+        main { max-width: 900px; margin: 0 auto; padding: 34px 20px 60px; }
+        .intro { margin: 0 0 22px; color: #625b67; }
+        .preguntas { display: grid; gap: 13px; }
+        details { border: 1px solid var(--linea); border-radius: 11px; background: var(--tarjeta); overflow: hidden; }
+        details[open] { box-shadow: 0 6px 18px rgba(91, 73, 107, .08); }
+        summary { padding: 17px 20px; color: var(--lila); cursor: pointer; font-weight: 700; }
+        summary:hover { background: #f8eff2; }
+        .respuesta { padding: 0 20px 18px; color: #5d5662; }
+        .respuesta p { margin: 0; }
+        .nota { margin-top: 24px; padding: 16px 18px; border-left: 4px solid var(--verde); border-radius: 5px; background: #eaf5f1; color: #456a64; }
+        @media (max-width: 600px) { header { padding-block: 32px; } main { padding-inline: 16px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="TAI.php">← Volver al inicio</a>
+        <p>TAI · Óptica</p>
+        <h1>Preguntas y dudas</h1>
+        <span>Respuestas simples para acompañarte antes de elegir tu próximo armazón.</span>
+    </header>
+    <main>
+        <p class="intro">Abrí cada pregunta para leer la respuesta. Recordá que una óptica profesional puede ayudarte a confirmar la opción más adecuada para vos.</p>
+        <section class="preguntas" aria-label="Preguntas frecuentes">
+            <details open>
+                <summary>¿Cómo saber cuál es mi tipo de rostro?</summary>
+                <div class="respuesta"><p>Observá tu rostro de frente, con el cabello retirado. Si es más largo que ancho puede ser ovalado o alargado; si tiene mejillas amplias y mandíbula suave, redondo; y si la frente y mandíbula son más marcadas, cuadrado. No hace falta encajar de forma exacta: muchas personas combinan rasgos.</p></div>
+            </details>
+            <details>
+                <summary>¿Cómo saber qué lente es mejor para mí?</summary>
+                <div class="respuesta"><p>Depende de tu graduación, las actividades que realizás y tus preferencias. Para leer, usar pantallas, manejar o hacer deporte, la óptica puede recomendar tratamientos y materiales distintos. El cuestionario de TAI te orienta, pero la receta y la recomendación profesional son fundamentales.</p></div>
+            </details>
+            <details>
+                <summary>¿Qué forma de armazón me puede favorecer?</summary>
+                <div class="respuesta"><p>Como guía, los armazones con líneas suaves suelen equilibrar rostros angulosos, mientras que los de formas rectas pueden dar definición a rostros redondos. Lo más importante es que te resulte cómodo, te guste y se apoye correctamente.</p></div>
+            </details>
+            <details>
+                <summary>¿Cómo sé si un armazón me queda bien?</summary>
+                <div class="respuesta"><p>Debería quedar centrado, sin presionar las sienes ni deslizarse por la nariz. Tus ojos deberían verse cerca del centro de cada lente. Probalo unos minutos y fijate si se siente estable y cómodo.</p></div>
+            </details>
+            <details>
+                <summary>¿Puedo usar cualquier armazón con mi graduación?</summary>
+                <div class="respuesta"><p>No siempre. Algunas graduaciones altas, lentes progresivos o tipos de lente necesitan medidas y monturas específicas. Consultá en la óptica antes de decidir para confirmar la compatibilidad.</p></div>
+            </details>
+            <details>
+                <summary>¿Cómo cuido mis lentes?</summary>
+                <div class="respuesta"><p>Limpialos con agua y jabón neutro o productos para lentes, y secalos con una microfibra limpia. Guardalos en su estuche cuando no los uses y evitá dejarlos al sol o con los lentes hacia abajo.</p></div>
+            </details>
+        </section>
+        <aside class="nota"><strong>Importante:</strong> esta información es orientativa. La graduación, el centrado y el ajuste final deben ser revisados por un profesional de óptica.</aside>
+    </main>
+</body>
+</html>

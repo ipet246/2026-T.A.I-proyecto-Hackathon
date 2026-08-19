@@ -43,7 +43,8 @@ function apto(int|string $valor): string
 <body>
     <header class="hero">
         <div>
-            <p class="eyebrow">T.A.I · Óptica</p>
+            <a class="volver-inicio" href="TAI.php">← Volver al inicio</a>
+            <p class="eyebrow">Proyecto TAI · Optica</p>
             <h1>Catalogo de armazones</h1>
             <p class="hero-copy">Explora las opciones disponibles, sus caracteristicas y recomendaciones de cuidado.</p>
         </div>

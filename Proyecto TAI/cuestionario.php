@@ -173,7 +173,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     <link rel="stylesheet" href="cuestionario.css">
 </head>
 <body>
-<header class="encabezado"><a href="armazones.php">← Ver catálogo</a><p>TAI · Óptica</p><h1>Encontrá tu armazón ideal</h1><span>Respondé el cuestionario y recibí tres recomendaciones.</span></header>
+<header class="encabezado"><a href="TAI.php">← Volver al inicio</a><a class="catalogo-link" href="armazones.php">Ver catálogo</a><p>TAI · Óptica</p><h1>Encontrá tu armazón ideal</h1><span>Respondé el cuestionario y recibí tres recomendaciones.</span></header>
 <main>
 <?php if ($recomendaciones): ?>
     <section class="resultado" aria-live="polite">
