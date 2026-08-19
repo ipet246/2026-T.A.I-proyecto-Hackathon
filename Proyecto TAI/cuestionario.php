@@ -140,6 +140,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 
             $consulta = mysqli_query($conexion, 'SELECT * FROM armazones');
             while ($armazon = mysqli_fetch_assoc($consulta)) {
+                // Para usuarios que practican deporte, esta compatibilidad es obligatoria.
+                // Así se evita recomendar un armazón que no fue diseñado para esa actividad.
+                if ($r['practica_deporte'] === 'si' && (int) $armazon['apto_deporte'] !== 1) {
+                    continue;
+                }
                 $armazon['puntaje'] = puntuarArmazon($armazon, $r);
                 $recomendaciones[] = $armazon;
             }
