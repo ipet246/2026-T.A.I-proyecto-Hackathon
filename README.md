@@ -2,7 +2,7 @@
 
 ##T.A.I (Tu Armazón Ideal)
 
-![](/ProyectoTAI/img/logo.png)
+![](/Proyecto_TAI/img/logo.png)
 
 Es una página web orientada a la selección de armazones de anteojos. El sistema combina análisis facial mediante inteligencia artificial y un sistema de recomendación basado en puntajes para ofrecer opciones adaptadas a las características y preferencias de cada usuario.
 
